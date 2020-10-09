@@ -8,6 +8,9 @@ Laboratório de estudos da linguagem de programação Dart.
 pub get
 ```
 
-## Editor Online
+## Links
 
-[Dartpad](https://dartpad.dev/)
+-   Site oficial: [dart.dev](https://dart.dev/)
+-   Instalação: [Dart SDK](https://dart.dev/get-dart)
+-   Pacotes: [pub.dev](https://pub.dev/)
+-   Editor online: [Dartpad](https://dartpad.dev/)
