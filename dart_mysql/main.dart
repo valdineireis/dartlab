@@ -2,7 +2,7 @@ import 'package:args/args.dart';
 
 void main(List<String> arguments) {
   var parser = new ArgParser();
-  parser.addOption('mode');
+  parser.addOption('mode', defaultsTo: 'select');
 
   var args = parser.parse(arguments);
 
