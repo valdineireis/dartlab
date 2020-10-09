@@ -2,9 +2,14 @@ import 'package:args/args.dart';
 
 void main(List<String> arguments) {
   var parser = new ArgParser();
-  parser.addOption('mode',
-      defaultsTo: 'select',
-      allowed: ['select-all', 'select', 'insert', 'delete', 'create-table']);
+  parser.addOption('mode', defaultsTo: 'select-all', allowed: [
+    'select-all',
+    'select',
+    'insert',
+    'update',
+    'delete',
+    'create-table'
+  ]);
 
   parser.addOption('id');
   parser.addOption('first_name');
@@ -12,9 +17,30 @@ void main(List<String> arguments) {
 
   var args = parser.parse(arguments);
 
-  // dart main.dart --mode select
-  print(args['mode']);
-  print(args['id']);
-  print(args['first_name']);
-  print(args['last_name']);
+  print('Executing in mode: ${args['mode']}');
+
+  if (args['mode'] == 'select' ||
+      args['mode'] == 'select-all' && args['id'] != null) {
+    print('...');
+  }
+
+  if (args['mode'] == 'select-all') {
+    print('...');
+  }
+
+  if (args['mode'] == 'insert') {
+    print('...');
+  }
+
+  if (args['mode'] == 'update') {
+    print('...');
+  }
+
+  if (args['mode'] == 'delete') {
+    print('...');
+  }
+
+  if (args['mode'] == 'create-table') {
+    print('...');
+  }
 }
