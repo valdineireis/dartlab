@@ -4,7 +4,9 @@ Laboratório de estudos da linguagem de programação Dart.
 
 ## Instalação das dependências
 
-`pub get`
+```
+pub get
+```
 
 ## Editor Online
 
