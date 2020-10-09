@@ -6,8 +6,15 @@ void main(List<String> arguments) {
       defaultsTo: 'select',
       allowed: ['select-all', 'select', 'insert', 'delete', 'create-table']);
 
+  parser.addOption('id');
+  parser.addOption('first_name');
+  parser.addOption('last_name');
+
   var args = parser.parse(arguments);
 
   // dart main.dart --mode select
   print(args['mode']);
+  print(args['id']);
+  print(args['first_name']);
+  print(args['last_name']);
 }
