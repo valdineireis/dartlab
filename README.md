@@ -22,6 +22,9 @@ dart main.dart --mode select --id 1
 
 // Buscar todos os dados do banco de dados
 dart main.dart --mode select-all
+
+// Atualizar dados do banco de dados
+dart main.dart --mode update --fist_name 'Novo Nome' --last_name 'XXX' --id 1
 ```
 
 ## Links

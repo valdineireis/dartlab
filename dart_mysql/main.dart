@@ -74,7 +74,31 @@ void main(List<String> arguments) async {
   }
 
   if (args['mode'] == 'update') {
-    print('...');
+    String sql = 'UPDATE users SET';
+    List data = [];
+
+    if (args['first_name'] != null) {
+      sql += ' first_name=?';
+      data.add(args['first_name']);
+    }
+
+    if (args['first_name'] != null && args['last_name'] != null) {
+      sql += ',';
+    }
+
+    if (args['last_name'] != null) {
+      sql += ' last_name=?';
+      data.add(args['last_name']);
+    }
+
+    if (args['id'] != null) {
+      sql += ' WHERE ID=?';
+      data.add(args['id']);
+    }
+
+    await conn.query(sql, data);
+
+    print('done');
   }
 
   if (args['mode'] == 'delete') {
