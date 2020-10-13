@@ -22,13 +22,46 @@ void main(List<String> arguments) async {
 
   var conn = await MySql.connect(host: 'localhost', user: 'root', password: 'root', db: 'dart_mysql');
 
-  if (args['mode'] == 'select' ||
-      args['mode'] == 'select-all' && args['id'] != null) {
-    print('...');
+  if (args['mode'] == 'select' || args['mode'] == 'select-all' && args['id'] != null) {
+    String sql = 'SELECT * FROM users';
+    List data = [];
+
+    if (args['id'] != null) {
+      sql += ' WHERE id=?';
+      data.add(args['id']);
+    }
+
+    sql += ' LIMIT 1;';
+
+    var results = await conn.query(sql, data);
+    var row = results.first;
+
+    print('');
+    print('---');
+
+    print('id: ' + row['id'].toString());
+    print('first_name: ' + row['first_name']);
+    print('last_name: ' + row['last_name']);
   }
 
   if (args['mode'] == 'select-all') {
-    print('...');
+    String sql = 'SELECT * FROM users;';
+    List data = [];
+
+    var results = await conn.query(sql, data);
+
+    print('');
+    print('---');
+
+    for (var row in results) {
+      print('id: ' + row['id'].toString());
+      print('first_name: ' + row['first_name']);
+      print('last_name: ' + row['last_name']);
+      print('---');
+    }
+
+    print('');
+    print('Total: ' + results.length.toString());
   }
 
   if (args['mode'] == 'insert') {
