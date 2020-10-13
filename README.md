@@ -25,6 +25,12 @@ dart main.dart --mode select-all
 
 // Atualizar dados do banco de dados
 dart main.dart --mode update --fist_name 'Novo Nome' --last_name 'XXX' --id 1
+
+// Remoção de dados do banco de dados
+dart main.dart --mode delete --id 2
+
+// Exemplo de execução de multiplas inserções
+dart multiple.dart
 ```
 
 ## Links
