@@ -44,7 +44,16 @@ void main(List<String> arguments) async {
   }
 
   if (args['mode'] == 'create-table') {
-    print('...');
+    var sql = """
+      CREATE TABLE `users` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `first_name` varchar(100) NOT NULL,
+        `last_name` varchar(100) NOT NULL,
+        PRIMARY KEY (`id`)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    """;
+    conn.query(sql);
+    print('done');
   }
 
   conn.close();
