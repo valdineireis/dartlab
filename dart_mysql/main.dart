@@ -102,7 +102,16 @@ void main(List<String> arguments) async {
   }
 
   if (args['mode'] == 'delete') {
-    print('...');
+    String sql = 'DELETE FROM users';
+    List data = [];
+
+    if (args['id'] != null) {
+      sql += ' WHERE id=?';
+      data.add(args['id']);
+    }
+
+    await conn.query(sql, data);
+    print('done');
   }
 
   if (args['mode'] == 'create-table') {
