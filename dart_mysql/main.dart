@@ -1,6 +1,7 @@
 import 'package:args/args.dart';
+import 'package:dart_mysql/connection.dart';
 
-void main(List<String> arguments) {
+void main(List<String> arguments) async {
   var parser = new ArgParser();
   parser.addOption('mode', defaultsTo: 'select-all', allowed: [
     'select-all',
@@ -18,6 +19,8 @@ void main(List<String> arguments) {
   var args = parser.parse(arguments);
 
   print('Executing in mode: ${args['mode']}');
+
+  var conn = await MySql.connect(host: 'localhost', user: 'root', password: 'root', db: 'dart_mysql');
 
   if (args['mode'] == 'select' ||
       args['mode'] == 'select-all' && args['id'] != null) {
@@ -43,4 +46,6 @@ void main(List<String> arguments) {
   if (args['mode'] == 'create-table') {
     print('...');
   }
+
+  conn.close();
 }
