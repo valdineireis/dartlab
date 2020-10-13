@@ -32,7 +32,12 @@ void main(List<String> arguments) async {
   }
 
   if (args['mode'] == 'insert') {
-    print('...');
+    var sql = 'INSERT INTO users (first_name, last_name) VALUES (?, ?)';
+    await conn.query(sql, [
+      args['first_name'],
+      args['last_name']
+    ]);
+    print('done');
   }
 
   if (args['mode'] == 'update') {
@@ -52,7 +57,7 @@ void main(List<String> arguments) async {
         PRIMARY KEY (`id`)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
     """;
-    conn.query(sql);
+    await conn.query(sql);
     print('done');
   }
 
