@@ -8,29 +8,29 @@ Laboratório de estudos da linguagem de programação Dart.
 pub get
 ```
 
-## Comandos da aplicação
+## Comandos da aplicação de estudo "dart_mysql"
 
 ```dart
 // Criar tabela no banco de dados (cria uma tabela com o nome `users`)
-dart main.dart --mode create-table
+dart dart_mysql/main.dart --mode create-table
 
 // Inserir dados na tabela `users`
-dart main.dart --mode insert --first_name Valdinei --last_name Reis
+dart dart_mysql/main.dart --mode insert --first_name Valdinei --last_name Reis
 
 // Buscar dados no banco de dados filtrando pelo campo `id`
-dart main.dart --mode select --id 1
+dart dart_mysql/main.dart --mode select --id 1
 
 // Buscar todos os dados do banco de dados
-dart main.dart --mode select-all
+dart dart_mysql/main.dart --mode select-all
 
 // Atualizar dados do banco de dados
-dart main.dart --mode update --fist_name 'Novo Nome' --last_name 'XXX' --id 1
+dart dart_mysql/main.dart --mode update --fist_name 'Novo Nome' --last_name 'XXX' --id 1
 
 // Remoção de dados do banco de dados
-dart main.dart --mode delete --id 2
+dart dart_mysql/main.dart --mode delete --id 2
 
 // Exemplo de execução de multiplas inserções
-dart multiple.dart
+dart dart_mysql/multiple.dart
 ```
 
 ## Links
