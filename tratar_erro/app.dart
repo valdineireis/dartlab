@@ -1,6 +1,6 @@
 main() {
-  int x = 0;
-  int y = 0;
+  int x = 10;
+  int y = 2;
 
   try {
     if (x <= 0) {
@@ -13,7 +13,10 @@ main() {
     print('Você não pode dividir números por zero.');
   } on FormatException catch (e) {
     print(e);
+  } catch(e) {
+    print(e);
+  } finally {
+    print('done');
   }
 
-  print('done');
 }
