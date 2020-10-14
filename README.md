@@ -57,6 +57,18 @@ Para criar um projeto web simples, podemos utilizar o seguinte comando **dentro 
 
 Para instalar as dependências, devemos usar o comando: `pub get`
 
+### Rodando o projeto Web no browser
+
+Para rodar o projeto web, antes precisamos instalar o pacote `webdev` na pasta do projeto:
+
+`pub global activate webdev`
+
+Após a instalação, podemos ver as opções disponíveis utilizando o comando: `webdev --help`
+
+Apara visualizarmos a aplicação no navegador web, podemos usar o comando: `webdev serve` 
+
+Ao concluir a execução, iremos ver no log o endereço que podemos acessar ([http://127.0.0.1:8080](http://127.0.0.1:8080)).
+
 ## Links
 
 -   Site oficial: [dart.dev](https://dart.dev/)
