@@ -8,9 +8,7 @@ Para instalar o Dart em nosso computador, podemos seguir as orientações do pr�
 
 ## Instalação das dependências dos projetos desse repositório
 
-```
-pub get
-```
+Dentro de cada projeto/pasta é necessário rodar o comando `pub get` para que as dependências sejam baixadas.
 
 ## Comandos da aplicação de estudo "dart_mysql"
 
