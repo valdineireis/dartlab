@@ -1,6 +1,6 @@
 main() {
   int x = 24;
-  int y = 2;
+  int y = 0;
 
   var result = x ~/ y;
 
