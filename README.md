@@ -77,3 +77,4 @@ Ao concluir a execução, iremos ver no log o endereço que podemos acessar ([ht
 -   Instalação: [Dart SDK](https://dart.dev/get-dart)
 -   Pacotes: [pub.dev](https://pub.dev/)
 -   Editor online: [Dartpad](https://dartpad.dev/)
+-   Dart Web: [dart:html library](https://api.dart.dev/stable/2.10.2/dart-html/dart-html-library.html)
