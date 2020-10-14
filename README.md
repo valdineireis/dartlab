@@ -39,6 +39,24 @@ dart dart_mysql/multiple.dart
 dart tratar_erro/app.dart 
 ```
 
+## Dart Web
+
+O `pub` é o gerenciador de pacotes do Dart.
+
+Instalação do pacote `stagehand` para nos ajudar a gerar um esqueleto de trabalho.
+
+`pub global activate stagehand`
+
+Após a execução desse comando, devemos ler a mensagem impressa no terminal, e adicionar o diretório mencionado nas variáveis de ambiente do sistema operacional.
+
+Após esse procedimento, reinicie o terminal de comandos que estiver utilizando para o mesmo reconhecer o comando `stagehand --help`, por exemplo.
+
+Para criar um projeto web simples, podemos utilizar o seguinte comando **dentro da pasta** desejada:
+
+`stagehand web-simple`
+
+Para instalar as dependências, devemos usar o comando: `pub get`
+
 ## Links
 
 -   Site oficial: [dart.dev](https://dart.dev/)
