@@ -7,10 +7,11 @@ main() {
       throw new FormatException('x is <= 0');
     }
 
-
     var result = x ~/ y;
     print(result);
-  } catch (e) {
+  } on IntegerDivisionByZeroException catch (e) {
+    print('Você não pode dividir números por zero.');
+  } on FormatException catch (e) {
     print(e);
   }
 
