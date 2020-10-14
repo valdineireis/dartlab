@@ -2,7 +2,11 @@
 
 Laboratório de estudos da linguagem de programação Dart.
 
-## Instalação das dependências
+## Instalação do Dart
+
+Para instalar o Dart em nosso computador, podemos seguir as orientações do próprio site [https://dart.dev/get-dart](https://dart.dev/get-dart).
+
+## Instalação das dependências dos projetos desse repositório
 
 ```
 pub get
