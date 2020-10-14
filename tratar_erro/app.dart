@@ -9,7 +9,7 @@ main() {
 
     var result = x ~/ y;
     print(result);
-  } on IntegerDivisionByZeroException catch (e) {
+  } on IntegerDivisionByZeroException {
     print('Você não pode dividir números por zero.');
   } on FormatException catch (e) {
     print(e);
