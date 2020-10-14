@@ -33,6 +33,12 @@ dart dart_mysql/main.dart --mode delete --id 2
 dart dart_mysql/multiple.dart
 ```
 
+## Comando da aplicação de estudo "tratar_erro"
+
+```dart
+dart tratar_erro/app.dart 
+```
+
 ## Links
 
 -   Site oficial: [dart.dev](https://dart.dev/)
