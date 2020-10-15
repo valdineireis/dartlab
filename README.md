@@ -71,6 +71,12 @@ Apara visualizarmos a aplicação no navegador web, podemos usar o comando: `web
 
 Ao concluir a execução, iremos ver no log o endereço que podemos acessar ([http://127.0.0.1:8080](http://127.0.0.1:8080)).
 
+### Gerando versão de publicação
+
+Para gerar uma versão de publicação, devemos utilizar o seguinte comando na pasta do projeto web: `webdev build`
+
+Com isso o Dart irá gerar uma pasta com o nome **build**. Em seguida podemos subir todos os arquivos dessa nova pasta para um servidor "qualquer", porque ele já possui tudo que ele precisa para funcionar, sem precisar ter o Dart instalado no servidor.
+
 ## Links
 
 -   Site oficial: [dart.dev](https://dart.dev/)
