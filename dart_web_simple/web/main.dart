@@ -1,5 +1,13 @@
 import 'dart:html';
 
+void clickNewLine(MouseEvent event) {
+  event.preventDefault();
+
+  var ul = querySelector('ul');
+  var newItem = Element.html('<li class="blue">New Item</li>');
+  ul.children.add(newItem);
+}
+
 void main() {
   querySelector('#output').text = 'Your Dart app is running.';
 
@@ -27,5 +35,8 @@ void main() {
   link.setAttribute('target', 'blank');
   link.text = 'Dart Lab';
 
-  querySelector('footer').children.add(link); 
+  querySelector('footer').children.add(link);
+
+  var linkNewLine = querySelector('#newLine');
+  linkNewLine.onClick.listen(clickNewLine);
 }
